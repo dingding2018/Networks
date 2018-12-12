@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/underwrite.css') }}">
+{% endblock %}
+
+{%block main %}
+   <h1 class="page-title">Check it Out!</h1>
+   <form action="/underwrite/" method="post">
+      <div class="form-container">
+          <div class="form-group">
+                <h3> Section 1: Basic Information</h3>
+                <h5>Name</h5>
+                <input autocomplete="off" autofocus name="name" placeholder="Your name" type="text"/>
+                <!--input autocomplete="off" autofocus email="email" placeholder="Email" type="text"/-->
+          </div>
+          <div class="form-group">
+               <h5>Gender</h5>
+               <input autocomplete="off" autofocus name="gender" placeholder="Please input M or F" type="text"/>
+          </div>
+          <div class="form-group">
+               <h5>Age</h5>
+               <input autocomplete="off" autofocus name="age" placeholder="e.g.30" type="text"/>
+          </div>
+          <div class="form-group">
+               <h5>Occupation</h5>
+               <input autocomplete="off" autofocus name="occupation" placeholder="Your Occupation" type="text"/>
+          </div>
+          <h1></h1>
+          <div class="form-group">
+             <input type="submit" value="Quick Assessment">
+          </div>
+      </div>
+   </form>
+
+   <form action="/underwrite/" method="post">
+      <div>
+          <div class="form-group">
+               <h3>Section 2: Underwriting Questions</h3>
+               <h5>Q1. What is your self-aware energy level?</h5>
+               <input autocomplete="off" autofocus name="energy" placeholder="e.g. 80 (out of 100)" type="text"/>
+          </div>
+          <div class="form-group">
+               <h5>Q2. Do you usually feel hot or cold than those around you?</h5>
+               <input autocomplete="off" autofocus name="water" placeholder="e.g.hot/cold/normal" type="text"/>
+          </div>
+          <div class="form-group">
+               <h5>Q3. Do you usually prefer drinking hot water or cold water?</h5>
+               <input autocomplete="off" autofocus name="water" placeholder="e.g.hot/cold/normal" type="text"/>
+          </div>
+          <div class="form-group">
+               <h5>Q4. Do you sweat when you don't do exercise?</h5>
+               <input autocomplete="off" autofocus name="sleep" placeholder="e.g.Yes/No" type="text"/>
+          </div>
+          <div class="form-group">
+               <h5>Q5. How many hour do you sleep every day and when do you usually go to bed?</h5>
+               <input autocomplete="off" autofocus name="sleep_hour" placeholder="e.g.8" type="text"/>
+               <input autocomplete="off" autofocus name="sleep_time" placeholder="e.g.23:00" type="text"/>
+          </div>
+          <div class="form-group">
+               <h5>Q6. Do you wake up often during the night? If yes, what time?</h5>
+               <input autocomplete="off" autofocus name="wakeup" placeholder="e.g.Yes/No" type="text"/>
+               <input autocomplete="off" autofocus name="wakeup_time" placeholder="e.g.2:00" type="text"/>
+          </div>
+          <div class="form-group">
+              <h5>Q7-1. Do you feel hungry when it is time for meal?</h5>
+              <h5>Q7-2. Do you have any specific taste preference?</h5>
+              <input autocomplete="off" autofocus name="hungry_feeling" placeholder="e.g.Yes/No" type="text"/>
+              <input autocomplete="off" autofocus name="meal_time" placeholder="e.g.2:00" type="text"/>
+          </div>
+          <div class="form-group">
+              <h5>Q8-1. Do you consider your digestion normal?</h5>
+              <h5>Q8-2. If no, please specify.</h5>
+              <input autocomplete="off" autofocus name="digestion" placeholder="e.g.Yes/No" type="text"/>
+              <input autocomplete="off" autofocus name="digest_detail" placeholder="e.g.gas/burping/nausea" type="text"/>
+          </div>
+          <div class="form-group">
+              <h5>Q9-1. How often do you do exercise per week?</h5>
+              <h5>Q9-2. What kind of exercise and where?</h5>
+              <input autocomplete="off" autofocus name="exercise_freq" placeholder="e.g.1" type="text"/>
+              <input autocomplete="off" autofocus name="exercise_detail" placeholder="e.g.running outside" type="text"/>
+          </div>
+          <div class="form-group">
+              <h5>Q10. Please describe your predominate mood.</h5>
+              <input autocomplete="off" autofocus name="mood" placeholder="e.g. content most of the time" type="text"/>
+          </div>
+          <div class="form-group">
+              <h4>Female Only</h4>
+              <h5>Q11. Do you have a regular period and how many days it lasts?</h5>
+              <input autocomplete="off" autofocus name="period" placeholder="e.g.Yes/No" type="text"/>
+              <input autocomplete="off" autofocus name="period_days" placeholder="e.g.4" type="text"/>
+          </div>
+          <h1></h1>
+          <div class="form-group">
+             <input type="submit" value="Submit">
+          </div>
+      </div>
+   </form>
+{% endblock %}
+
