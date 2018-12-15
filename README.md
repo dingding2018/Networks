@@ -1,5 +1,5 @@
 # Network Project
-[![Build Status](https://travis-ci.org/dingding2018/Networks.svg?branch=master)](https://travis-ci.org/dingding2018/Networks)i
+[![Build Status](https://travis-ci.org/dingding2018/Networks.svg?branch=master)](https://travis-ci.org/dingding2018/Networks)
 
 # About
 This repo is for the project of Network class.
@@ -36,6 +36,7 @@ The webpage should be running.
 
 3. Database
 Since the service is running on local, you still need to make sure the database is available on your local PC.
+
 (1) Setup (please do it under virtual flask env)
 ```shell
 cd File/
@@ -47,6 +48,7 @@ python manage.py db upgrade
 - Input the password "root" to enter the database
 - SQL command lines to check the tables in database
 ```shell
+CREATE DATABASE test_demo;
 use test_demo;
 show tables;
 desc user; (check the columns in table "user")
